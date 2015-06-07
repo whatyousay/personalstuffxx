@@ -3453,7 +3453,7 @@ function Player()
 		}
 
 		//GameController.Router.cooldownTeleport(GameData.player().teleportCooldown);
-		GameController.Router.cooldownTeleport(-1);
+		GameController.Router.cooldownTeleport(0);
 
 		self._teleportLocation = new Vector2(data.player.location.x, data.player.location.y);
 		self._teleportStage    = -36;
@@ -5069,7 +5069,7 @@ var world_settings = {};GameData = function($)
 								staminaGain: p.staminaGain,
 								goldGain: p.goldGain,
 								guildId: p.guildId,
-								teleportCooldown: p.teleportCooldown
+								teleportCooldown: 0
 							}, 
 							b: 
 							{
