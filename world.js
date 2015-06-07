@@ -3453,7 +3453,7 @@ function Player()
 		}
 
 		//GameController.Router.cooldownTeleport(GameData.player().teleportCooldown);
-		GameController.Router.cooldownTeleport(0);
+		GameController.Router.cooldownTeleport(-1);
 
 		self._teleportLocation = new Vector2(data.player.location.x, data.player.location.y);
 		self._teleportStage    = -36;
