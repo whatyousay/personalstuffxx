@@ -3131,7 +3131,7 @@ Router.prototype.cooldownTeleport = function(seconds){
 
 	setTimeout(function () {
 		$('.teleport').removeClass('cooldown');
-	}, seconds * 1000);
+	}, seconds * 100);
 };
 
 Router.prototype._drawRouteAsDots = function(route, context, zX, zY, w, h, dotRadius, fillStyle, lineWidth, strokeStyle){
