@@ -20,7 +20,6 @@ if (Object.prototype.__defineGetter__&&!Object.defineProperty) {
 	}
 };var GlobalState = {};
 
-//GlobalState.MoveSpeed 	= 400;
 GlobalState.MoveSpeed 	= 200;
 GlobalState.TilesPerRow = 13;
 GlobalState.TileW = 40;
@@ -3131,7 +3130,7 @@ Router.prototype.cooldownTeleport = function(seconds){
 
 	setTimeout(function () {
 		$('.teleport').removeClass('cooldown');
-	}, seconds * 100);
+	}, seconds * 1000);
 };
 
 Router.prototype._drawRouteAsDots = function(route, context, zX, zY, w, h, dotRadius, fillStyle, lineWidth, strokeStyle){
@@ -3453,7 +3452,7 @@ function Player()
 		}
 
 		GameController.Router.cooldownTeleport(GameData.player().teleportCooldown);
-		
+
 		self._teleportLocation = new Vector2(data.player.location.x, data.player.location.y);
 		self._teleportStage    = -36;
 	});
@@ -4304,8 +4303,7 @@ GameController = (function()
 	GC.prototype.UpdateDarkness = function(){
 		var darkness = this.Darkness,
 			mouseController = this.MouseController,
-			//isDark = GameData.realm().dark,
-			isDark = false,
+			isDark = GameData.realm().dark,
 			playerVision = GameData.player().visionRadius;
 
 		// Not Dark
@@ -4320,8 +4318,9 @@ GameController = (function()
 		{
 			var visionRadius = GlobalState.TileWHalf + (GlobalState.TileW * playerVision);
 
-			darkness.SetVisionRadius(visionRadius);
-			mouseController.SetMaxDistance(visionRadius);
+			darkness.SetVisionRadius(10);
+			//mouseController.SetMaxDistance(visionRadius);
+			mouseController.SetMaxDistance(false);
 		}
 	};
 
