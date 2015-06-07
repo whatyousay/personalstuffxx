@@ -3452,9 +3452,8 @@ function Player()
 			return;
 		}
 
-		//GameController.Router.cooldownTeleport(GameData.player().teleportCooldown);
-		GameController.Router.cooldownTeleport(0);
-
+		GameController.Router.cooldownTeleport(GameData.player().teleportCooldown);
+		
 		self._teleportLocation = new Vector2(data.player.location.x, data.player.location.y);
 		self._teleportStage    = -36;
 	});
@@ -5069,7 +5068,7 @@ var world_settings = {};GameData = function($)
 								staminaGain: p.staminaGain,
 								goldGain: p.goldGain,
 								guildId: p.guildId,
-								teleportCooldown: 0
+								teleportCooldown: p.teleportCooldown
 							}, 
 							b: 
 							{
@@ -5087,7 +5086,7 @@ var world_settings = {};GameData = function($)
 								staminaGain: _player.staminaGain,
 								goldGain: _player.goldGain,
 								guildId: _player.guildId,
-								teleportCooldown: 0
+								teleportCooldown: _player.teleportCooldown
 							}
 						}
 					);
