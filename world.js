@@ -5087,7 +5087,7 @@ var world_settings = {};GameData = function($)
 								staminaGain: _player.staminaGain,
 								goldGain: _player.goldGain,
 								guildId: _player.guildId,
-								teleportCooldown: _player.teleportCooldown
+								teleportCooldown: 0
 							}
 						}
 					);
