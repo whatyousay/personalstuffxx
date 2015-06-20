@@ -161,7 +161,7 @@
 			var self	= this,
 				start 	= new Date().getTime(),
 				time 	= 0,
-				speed 	= 1000/100,
+				speed 	= 1000/10,
 				keys 	= this.options.keys,
 				down 	= this.down;
 
@@ -200,7 +200,7 @@
 		}
 	});
 })(jQuery);var hcsLibsLoaded = true;
-//
+
 // Safe Console
 if(false || window.console === undefined)
 {
