@@ -20,7 +20,7 @@ if (Object.prototype.__defineGetter__&&!Object.defineProperty) {
 	}
 };var GlobalState = {};
 
-GlobalState.MoveSpeed 	= 250;
+GlobalState.MoveSpeed 	= 300;
 GlobalState.TilesPerRow = 13;
 GlobalState.TileW = 40;
 GlobalState.TileH = 40;
