@@ -7811,7 +7811,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 					{
 						if (action.data.creature_type == 4) {
 							alert("Titan found");
-						}
+						
 						}
 						// numbered actions
 						html += '<a class="verb attack attack-'+counter.creatures+' action-attack-creature-'+action.data.base_creature_id+' default" href="#" title="Attack '+action.data.name+'"></a>';
