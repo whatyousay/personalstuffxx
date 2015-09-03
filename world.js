@@ -7810,7 +7810,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 					if(action.data.creature_type == 0 || action.data.creature_type == 5 || action.data.creature_type == 4)
 					{
 						if (action.data.creature_type == 4) {
-							alert("Titan found")l
+							alert("Titan found");
 						}
 						}
 						// numbered actions
