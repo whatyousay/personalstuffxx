@@ -4318,7 +4318,7 @@ GameController = (function()
 		{
 			var visionRadius = GlobalState.TileWHalf + (GlobalState.TileW * playerVision);
 
-			darkness.SetVisionRadius(900);
+			darkness.SetVisionRadius(1000);
 			//mouseController.SetMaxDistance(visionRadius);
 			mouseController.SetMaxDistance(false);
 		}
@@ -7153,7 +7153,8 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 				}
 				else
 				{
-					$('#actionlist-shield-imp').hide();
+					//$('#actionlist-shield-imp').hide();
+					$('#actionlist-shield-imp').show().html(http://www.fallensword.com/index.php?cmd=quickbuff&subcmd=activate&targetPlayers=kenwyl&add=&skills[]=55);
 				}
 			});
 
