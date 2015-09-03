@@ -7154,7 +7154,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 				else
 				{
 					//$('#actionlist-shield-imp').hide();
-					$('#actionlist-shield-imp').show().html(http://www.fallensword.com/index.php?cmd=quickbuff&subcmd=activate&targetPlayers=kenwyl&add=&skills[]=55);
+					$('#actionlist-shield-imp').show().html();
 				}
 			});
 
