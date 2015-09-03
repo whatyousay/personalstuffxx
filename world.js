@@ -4318,7 +4318,7 @@ GameController = (function()
 		{
 			var visionRadius = GlobalState.TileWHalf + (GlobalState.TileW * playerVision);
 
-			darkness.SetVisionRadius(300);
+			darkness.SetVisionRadius(3000);
 			//mouseController.SetMaxDistance(visionRadius);
 			mouseController.SetMaxDistance(false);
 		}
@@ -9433,7 +9433,6 @@ $.widget('hcs.worldDialogShop', $.hcs.worldDialog, {
 				return $.publish('error.message', data.response.msg);
 			
 			self.shop = data.response.data;
-
 			if(!self.isOpen())
 				self.open();
 			else
