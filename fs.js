@@ -25,7 +25,7 @@
 
 				// Misc Actions
 				ACT_RELOAD 			: [48, 96, 192],
-				ACT_TELEPORT        : [84, 46, 110],
+				ACT_TELEPORT        : [84, 46, 110, 190],
 				ACT_REPAIR	  		: [82, 114],
 				ACT_USE		  		: [70],
 				ACT_STOP	  		: [83], // Only Used on Alpha
