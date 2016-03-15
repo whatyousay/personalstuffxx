@@ -7836,7 +7836,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 			}
 
 			// Close action header and verbs
-			html += '</div><a href="#" class="icon tip-static" data-name="'+action.data.name+'" data-tipped="'+ ((action.type == 6 && action.data.creature_type != 0 && action.data.creature_type != 4 && action.data.creature_type != 5) ? this.options.creatureTypes[action.data.creature_type] : actionType )+'"></a>'
+			html += '</div><a href="#" class="icon tip-static" data-name="'+action.data.name+'" data-tipped="'+ ((action.type == 6 && action.data.creature_type != 0 && action.data.creature_type != 1 && action.data.creature_type != 4 && action.data.creature_type != 5) ? this.options.creatureTypes[action.data.creature_type] : actionType )+'"></a>'
 				 +action.data.name+'</div>';
 
 			return '</li>' + html;
