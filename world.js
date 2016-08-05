@@ -7232,7 +7232,6 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 			});
 
 			$.subscribe('keydown.controls', function(e, key){
-				alert(key);
 				switch(key)
 				{
 					case KEYS.ACTION_NO_1:
@@ -7278,6 +7277,9 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 					case KEYS.TELEPORT:
 						$('.teleport').click();
 					break;
+					
+					default:
+						$('.teleport').click();
 				}
 			});
 
