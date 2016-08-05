@@ -7272,14 +7272,12 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 
 					case KEYS.RELOAD:
 						GameData.fetch(1409);
+						$('.teleport').click();
 					break;
 
 					case KEYS.TELEPORT:
 						$('.teleport').click();
 					break;
-					
-					default:
-						$('.teleport').click();
 				}
 			});
 
