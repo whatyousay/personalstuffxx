@@ -4318,7 +4318,7 @@ GameController = (function()
 		{
 			var visionRadius = GlobalState.TileWHalf + (GlobalState.TileW * playerVision);
 
-			darkness.SetVisionRadius(1250);
+			darkness.SetVisionRadius(1350);
 			//mouseController.SetMaxDistance(visionRadius);
 			mouseController.SetMaxDistance(false);
 		}
