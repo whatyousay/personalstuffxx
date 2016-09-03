@@ -7808,7 +7808,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 
 				case 6: // Creature
 					html += '<a href="#" class="view verb tip-static" data-tipped="Look at the '+action.data.name+'"></a>';
-					if(action.data.creature_type == 0 || action.data.creature_type == 5 || action.data.creature_type == 4)
+					if(action.data.creature_type == 0 || action.data.creature_type == 5 || action.data.creature_type == 4 || action.data.creature_type == 1)
 					{
 						// numbered actions
 						html += '<a class="verb attack attack-'+counter.creatures+' action-attack-creature-'+action.data.base_creature_id+' default" href="#" title="Attack '+action.data.name+'"></a>';
