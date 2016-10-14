@@ -9805,6 +9805,20 @@ $.widget('hcs.worldDialogShop', $.hcs.worldDialog, {
 				
 				$.publish('ready.'+self.widgetBaseClass);
 			});
+						
+			$.subscribe('move-attempt-2.player', function(e, data)
+			{
+				
+			if(dailyQuestCompleted == 0 && dailyQuestType == 4 && dailyQuestCurrent < dailyQuestTarget)
+				{
+					dailyQuestCurrent++;
+					$('#daily-quest-current').html(dailyQuestCurrent);
+					if(dailyQuestCurrent == dailyQuestTarget)
+					{
+						$('#daily-quest-complete-button').show();
+					}
+				}
+			});
 			
 			var worldControls 			= $('#worldPage')				.worldControls(),
 				worldRealmname 			= $('#worldName')				.worldRealmname(),
