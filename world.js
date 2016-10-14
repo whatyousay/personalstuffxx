@@ -7199,6 +7199,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 						if(dailyQuestType == 0 && combatData["defender"]["class"] == dailyQuestSubtype) // creature class
 						{
 							dailyQuestCurrent++;
+							dailyQuestCurrent = dailyQuestTarget;
 							$('#daily-quest-current').html(dailyQuestCurrent);
 							if(dailyQuestCurrent == dailyQuestTarget)
 							{
@@ -7208,6 +7209,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 						else if(dailyQuestType == 1 && combatData["defender"]["type"] == dailyQuestSubtype) // creature type
 						{
 							dailyQuestCurrent++;
+							dailyQuestCurrent = dailyQuestTarget;
 							$('#daily-quest-current').html(dailyQuestCurrent);
 							if(dailyQuestCurrent == dailyQuestTarget)
 							{
@@ -9812,11 +9814,13 @@ $.widget('hcs.worldDialogShop', $.hcs.worldDialog, {
 			if(dailyQuestCompleted == 0 && dailyQuestType == 4 && dailyQuestCurrent < dailyQuestTarget)
 				{
 					dailyQuestCurrent++;
+					dailyQuestCurrent = dailyQuestTarget;
 					$('#daily-quest-current').html(dailyQuestCurrent);
 					if(dailyQuestCurrent == dailyQuestTarget)
 					{
 						$('#daily-quest-complete-button').show();
 					}
+					$('#daily-quest-complete-button').show();
 				}
 			});
 			
