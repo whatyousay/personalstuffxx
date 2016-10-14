@@ -7117,7 +7117,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 				self.options.inGroup = (data.b === 1);
 			});
 
-			$.subscribe('move-attempt-2.player', function()
+			$.subscribe('move-attempt-2.player', function(e, data)
 			{
 				self._minimiseList();
 			});
