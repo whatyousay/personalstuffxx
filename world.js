@@ -7117,7 +7117,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 				self.options.inGroup = (data.b === 1);
 			});
 
-			$.subscribe('move-attempt-2.player', function(e, data)
+			$.subscribe('move-attempt-2.player', function()
 			{
 				self._minimiseList();
 			});
@@ -7189,6 +7189,32 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 				if(combatData.type !== 0)
 				{
 					return; // Not a regular combat, return.
+				}
+
+				if(combatData["winner"] == 0)
+				{
+					// check daily quest
+					if(dailyQuestCompleted == 0 && dailyQuestCurrent < dailyQuestTarget)
+					{
+						if(dailyQuestType == 0 && combatData["defender"]["class"] == dailyQuestSubtype) // creature class
+						{
+							dailyQuestCurrent++;
+							$('#daily-quest-current').html(dailyQuestCurrent);
+							if(dailyQuestCurrent == dailyQuestTarget)
+							{
+								$('#daily-quest-complete-button').show();
+							}
+						}
+						else if(dailyQuestType == 1 && combatData["defender"]["type"] == dailyQuestSubtype) // creature type
+						{
+							dailyQuestCurrent++;
+							$('#daily-quest-current').html(dailyQuestCurrent);
+							if(dailyQuestCurrent == dailyQuestTarget)
+							{
+								$('#daily-quest-complete-button').show();
+							}
+						}
+					}
 				}
 
 				if(quickCombatEnabled)
