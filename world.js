@@ -7117,7 +7117,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 				self.options.inGroup = (data.b === 1);
 			});
 
-			$.subscribe('move-attempt-2.player', function()
+			$.subscribe('move-attempt-2.player', function(e, data)
 			{
 				self._minimiseList();
 			});
@@ -7153,8 +7153,7 @@ $.widget('hcs.worldDialogSettings', $.hcs.worldDialog, {
 				}
 				else
 				{
-					//$('#actionlist-shield-imp').hide();
-					$('#actionlist-shield-imp').show().html();
+					$('#actionlist-shield-imp').hide();
 				}
 			});
 
@@ -9808,8 +9807,7 @@ $.widget('hcs.worldDialogShop', $.hcs.worldDialog, {
 						
 			$.subscribe('move-attempt-2.player', function(e, data)
 			{
-				
-			if(dailyQuestCompleted == 0 && dailyQuestType == 4 && dailyQuestCurrent < dailyQuestTarget)
+				if(dailyQuestCompleted == 0 && dailyQuestType == 4 && dailyQuestCurrent < dailyQuestTarget)
 				{
 					dailyQuestCurrent++;
 					$('#daily-quest-current').html(dailyQuestCurrent);
@@ -9817,7 +9815,6 @@ $.widget('hcs.worldDialogShop', $.hcs.worldDialog, {
 					{
 						$('#daily-quest-complete-button').show();
 					}
-					$('#daily-quest-complete-button').show();
 				}
 			});
 			
