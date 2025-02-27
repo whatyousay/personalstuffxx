@@ -88,6 +88,7 @@ function send_command(event) {
             sendMessageToTwitchChat(`${suffix}${randomize_case(cmd)}`);
         else
             sendMessageToTwitchChat(`${suffix}${cmd}`);
+    alert(${randomize_case(cmd)});
     else
         alert("Please contact script creator, this button doesn't seem to work correctly");
 }
