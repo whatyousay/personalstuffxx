@@ -7,7 +7,6 @@ function randomize_case(word) {
     return word.split('').map(function(letter) {
         return Math.random() < 0.5 ? letter.toUpperCase() : letter.toLowerCase();
     }).join('');
-    alert(word);
 }
 
 
