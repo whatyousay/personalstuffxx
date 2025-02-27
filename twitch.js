@@ -82,12 +82,11 @@ function send_command(event) {
     cmd += event.target.getAttribute("cmd");
 
     let suffix = "";
-    //if(cmd.trim() !== "" && cmd !== null)
-    if(cmd !== null)
+    if(cmd.trim() !== "" && cmd !== null)
         if(GM_config.get("bypass_shadowban"))
-            sendMessageToTwitchChat(`${randomize_case(cmd)}`);
+            sendMessageToTwitchChat(`${suffix}${randomize_case(cmd)}`);
         else
-            sendMessageToTwitchChat(`${cmd}`);
+            sendMessageToTwitchChat(`${suffix}${cmd}`);
     else
         alert("Please contact script creator, this button doesn't seem to work correctly");
 }
