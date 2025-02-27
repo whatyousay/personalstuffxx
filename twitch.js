@@ -82,7 +82,8 @@ function send_command(event) {
     cmd += event.target.getAttribute("cmd");
 
     let suffix = "";
-    if(cmd.trim() !== "" && cmd !== null)
+    //if(cmd.trim() !== "" && cmd !== null)
+    if(cmd !== null)
         if(GM_config.get("bypass_shadowban"))
             sendMessageToTwitchChat(`${suffix}${randomize_case(cmd)}`);
         else
